@@ -1,0 +1,21 @@
+:root {
+  --main-backgroundColor: #ced4da;
+
+  --form-width: 40vw;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+}
+
+.form-section {
+  height: 100vh;
+  width: var(--form-width);
+}
+
+.cv-view {
+  height: 100vh;
+  width: calc(100vw - var(--form-width));
+  background-color: var(--main-backgroundColor);
+}
