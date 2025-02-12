@@ -1,5 +1,5 @@
 :root {
-  --main-backgroundColor: #ced4da;
+  --main-backgroundColor: #e0e0e0;
 
   --form-width: 40vw;
 }
@@ -12,6 +12,8 @@
 .form-section {
   height: 100vh;
   width: var(--form-width);
+  box-shadow: 1px 0px 10px rgba(54, 54, 54, 0.3); /* Right shadow */
+  position: relative;
 }
 
 .cv-view {
