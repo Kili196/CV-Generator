@@ -9,7 +9,9 @@ function App() {
   return (
     
     <div className="container">
-      <div className="form-section">d dsadas </div>
+      <div className="form-section">
+        <header> Create your own CV!</header>  
+      </div>
       <div className="cv-view"> dsasd </div>
     </div>
   
