@@ -1,6 +1,7 @@
 :root {
   --main-backgroundColor: #e8ecec;
   --form-width: 40vw;
+  --highlight-color: #7b2cbf;
 }
 
 * {
@@ -28,6 +29,13 @@
 .cv-view {
   height: 100vh;
   min-width: calc(100vw - var(--form-width));
-
   background-color: var(--main-backgroundColor);
+}
+
+h1 {
+  font-size: 2.1rem;
+}
+
+.highlight {
+  color: var(--highlight-color);
 }
