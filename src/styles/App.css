@@ -19,6 +19,7 @@
   box-shadow: 1px 0px 10px rgba(54, 54, 54, 0.3); /* Right shadow */
   position: relative;
   padding-top: 20px;
+  padding: 20px;
 }
 
 .form-section header {

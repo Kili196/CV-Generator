@@ -1,7 +1,7 @@
 const SimpleInputField = ({ text, value, setValue }) => {
   return (
     <>
-      <div className="simpleinput-container">
+      <div className="input-container">
         <label> {text}: </label>
         <input required type="text" />
       </div>

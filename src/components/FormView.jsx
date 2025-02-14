@@ -11,9 +11,16 @@ const FormView = () => {
           </span>
         </h1>
       </header>
-
-      <SimpleInputField text={"Firstname"} />
-      <SimpleInputField text={"Firstname"} />
+      <form>
+        <div className="form-row">
+          <SimpleInputField text={"Firstname"} />
+          <SimpleInputField text={"Firstname"} />
+        </div>
+        <div className="form-row">
+          <SimpleInputField text={"Firstname"} />
+          <SimpleInputField text={"Firstname"} />
+        </div>
+      </form>
     </div>
   );
 };
