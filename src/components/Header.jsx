@@ -1,3 +1,5 @@
+import Seperator from "./Seperator";
+
 const Header = () => {
   return (
     <header>
@@ -7,6 +9,7 @@ const Header = () => {
           <em> RESUME! </em>
         </span>
       </h1>
+      <Seperator />
     </header>
   );
 };

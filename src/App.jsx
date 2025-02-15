@@ -1,5 +1,7 @@
 import "./styles/App.css";
 import "./styles/Form.css";
+import "./styles/Seperator.css";
+import "./styles/Header.css";
 import FormView from "./components/FormView";
 import { useState } from "react";
 
