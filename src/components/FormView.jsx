@@ -1,10 +1,23 @@
 import Header from "./Header";
 import SimpleInputField from "./SimpleInputField";
+import { useState } from "react";
 
 const FormView = ({ user, setUser }) => {
+  const [userTemp, setUserTemp] = useState({
+    firstname: "",
+    lastname: "",
+    email: "",
+    phonenumber: "",
+  });
+
   const handleChange = (event, detail) => {
     const value = event.target.value;
-    setUser({ ...user, [detail]: value });
+    setUserTemp({ ...userTemp, [detail]: value });
+  };
+
+  const handleEvent = (event) => {
+    event.preventDefault();
+    setUser(userTemp);
   };
 
   return (
@@ -44,7 +57,10 @@ const FormView = ({ user, setUser }) => {
           />
         </div>
 
-        <button type="submit"> Generate RESUMe </button>
+        <button type="submit" onClick={handleEvent}>
+          {" "}
+          Generate RESUMe{" "}
+        </button>
       </form>
     </div>
   );
