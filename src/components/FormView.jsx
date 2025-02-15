@@ -59,7 +59,7 @@ const FormView = ({ user, setUser }) => {
 
         <button type="submit" onClick={handleEvent}>
           {" "}
-          Generate RESUMe{" "}
+          Generate RESUME{" "}
         </button>
       </form>
     </div>
