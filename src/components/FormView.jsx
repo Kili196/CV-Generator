@@ -12,28 +12,30 @@ const FormView = () => {
         </h1>
       </header>
       <form>
-        <div className="name-input">
+        <div className="form-input-container">
+          <div className="name-input">
+            <SimpleInputField
+              text={"Firstname"}
+              placeholder={"Enter firstname"}
+              type={"text"}
+            />
+            <SimpleInputField
+              text={"Lastname"}
+              placeholder={"Enter lastname"}
+              type={"text"}
+            />
+          </div>
           <SimpleInputField
-            text={"Firstname"}
-            placeholder={"Enter firstname"}
-            type={"text"}
+            text={"Email-Adress"}
+            type={"email"}
+            placeholder={"Enter email"}
           />
           <SimpleInputField
-            text={"Lastname"}
-            placeholder={"Enter lastname"}
-            type={"text"}
+            text={"Phone-number"}
+            type={"tel"}
+            placeholder={"Enter phonenumber"}
           />
         </div>
-        <SimpleInputField
-          text={"Email-Adress"}
-          type={"email"}
-          placeholder={"Enter email"}
-        />
-        <SimpleInputField
-          text={"Phone-number"}
-          type={"tel"}
-          placeholder={"Enter phonenumber"}
-        />
 
         <button type="submit"> Generate RESUMe </button>
       </form>

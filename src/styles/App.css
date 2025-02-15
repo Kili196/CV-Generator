@@ -14,6 +14,8 @@
 }
 
 .form-section {
+  display: flex;
+  flex-direction: column;
   height: 100vh;
   min-width: var(--form-width);
   box-shadow: 1px 0px 10px rgba(54, 54, 54, 0.3); /* Right shadow */
