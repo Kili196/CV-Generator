@@ -1,3 +1,4 @@
+import Header from "./Header";
 import SimpleInputField from "./SimpleInputField";
 
 const FormView = ({ user, setUser }) => {
@@ -8,14 +9,7 @@ const FormView = ({ user, setUser }) => {
 
   return (
     <div className="form-section">
-      <header>
-        <h1>
-          Create your own
-          <span className="highlight">
-            <em> RESUME! </em>
-          </span>
-        </h1>
-      </header>
+      <Header />
       <form>
         <div className="form-input-container">
           <div className="name-input">
