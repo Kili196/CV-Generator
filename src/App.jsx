@@ -4,17 +4,20 @@ import FormView from "./components/FormView";
 import { useState } from "react";
 
 function App() {
-  const [userDetails, setUserDetails] = useState({
+  const [user, setUser] = useState({
     firstname: "",
-    lastanem: "",
+    lastname: "",
     email: "",
     phonenumber: "",
   });
 
   return (
     <div className="container">
-      <FormView />
-      <div className="cv-view"> dsasd </div>
+      <FormView user={user} setUser={setUser} />
+      <div className="cv-view">
+        {" "}
+        dsasd {user.firstname} {user.lastname} {user.email} {user.phonenumber}{" "}
+      </div>
     </div>
   );
 }

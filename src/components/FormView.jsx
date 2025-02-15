@@ -1,6 +1,11 @@
 import SimpleInputField from "./SimpleInputField";
 
-const FormView = () => {
+const FormView = ({ user, setUser }) => {
+  const handleChange = (event, detail) => {
+    const value = event.target.value;
+    setUser({ ...user, [detail]: value });
+  };
+
   return (
     <div className="form-section">
       <header>
@@ -18,22 +23,30 @@ const FormView = () => {
               text={"Firstname"}
               placeholder={"Enter firstname"}
               type={"text"}
+              handleChange={handleChange}
+              objectChange="firstname"
             />
             <SimpleInputField
               text={"Lastname"}
               placeholder={"Enter lastname"}
               type={"text"}
+              handleChange={handleChange}
+              objectChange="lastname"
             />
           </div>
           <SimpleInputField
             text={"Email-Adress"}
             type={"email"}
             placeholder={"Enter email"}
+            handleChange={handleChange}
+            objectChange="email"
           />
           <SimpleInputField
             text={"Phone-number"}
             type={"tel"}
             placeholder={"Enter phonenumber"}
+            handleChange={handleChange}
+            objectChange="phonenumber"
           />
         </div>
 
