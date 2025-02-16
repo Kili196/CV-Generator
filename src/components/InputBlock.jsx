@@ -13,7 +13,7 @@ const InputBlock = ({ heading, subheading }) => {
         setDoubleInputs={setDoubleInputs}
         subheading={subheading}
       />
-      <div className="journey-input">
+      <div className="scrollable padding-right-1em">
         <DoubleInputField subheading={subheading} />
         {doubleInputs}
       </div>

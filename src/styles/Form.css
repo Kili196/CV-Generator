@@ -72,9 +72,13 @@ form button:hover {
   margin-bottom: 6px;
 }
 
-.journey-input {
-  display: flex;
-  flex-direction: column;
+.scrollable {
+  max-height: 8vw;
+  overflow-y: auto;
+}
+
+.padding-right-1em {
+  padding-right: 1em;
 }
 
 .input-pair {
@@ -88,5 +92,27 @@ form button:hover {
     display: grid;
     grid-template-columns: 1fr;
     gap: 3px;
+  }
+}
+
+@media (max-width: 1360px) {
+  .input-pair {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3px;
+  }
+
+  .form-input-container {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+    max-height: 70vw;
+    padding-right: 10px;
+    overflow-y: auto;
+  }
+
+  .scrollable {
+    max-height: 15vw;
+    overflow-y: auto;
   }
 }
