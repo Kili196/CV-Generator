@@ -2,7 +2,7 @@ import { useState } from "react";
 import FormHeadline from "./FormHeadline";
 import DoubleInputField from "./InputFIelds/DoubleInputField";
 
-const AdvancedInputField = ({ heading, subheading }) => {
+const InputBlock = ({ heading, subheading }) => {
   const [doubleInputs, setDoubleInputs] = useState([]);
 
   return (
@@ -21,4 +21,4 @@ const AdvancedInputField = ({ heading, subheading }) => {
   );
 };
 
-export default AdvancedInputField;
+export default InputBlock;

@@ -1,6 +1,6 @@
 import Header from "./Header";
 import SimpleInputField from "./InputFIelds/SimpleInputField";
-import AdvancedInputField from "./AdvancdeInputField";
+import InputBlock from "./InputBlock";
 import { useState } from "react";
 
 const FormView = ({ user, setUser }) => {
@@ -58,10 +58,9 @@ const FormView = ({ user, setUser }) => {
             objectChange="phonenumber"
           />
 
-          <AdvancedInputField
-            heading={"School Journey:"}
-            subheading={"School"}
-          />
+          <InputBlock heading={"School Journey:"} subheading={"School"} />
+
+          <InputBlock heading={"Work Journey:"} subheading={"Work"} />
         </div>
 
         <button type="submit" onClick={handleEvent}>
