@@ -58,7 +58,10 @@ const FormView = ({ user, setUser }) => {
             objectChange="phonenumber"
           />
 
-          <AdvancedInputField heading={"School Journey:"} />
+          <AdvancedInputField
+            heading={"School Journey:"}
+            subheading={"School"}
+          />
         </div>
 
         <button type="submit" onClick={handleEvent}>

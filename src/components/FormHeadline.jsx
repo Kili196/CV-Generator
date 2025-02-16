@@ -1,9 +1,17 @@
 import DoubleInputField from "./InputFIelds/DoubleInputField";
 
-const FormHeadline = ({ headline, doubleInputs, setDoubleInputs }) => {
+const FormHeadline = ({
+  headline,
+  doubleInputs,
+  setDoubleInputs,
+  subheading,
+}) => {
   function addInput(event) {
     event.preventDefault();
-    setDoubleInputs([...doubleInputs, <DoubleInputField />]);
+    setDoubleInputs([
+      ...doubleInputs,
+      <DoubleInputField subheading={subheading} />,
+    ]);
   }
 
   return (

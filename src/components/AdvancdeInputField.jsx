@@ -2,18 +2,19 @@ import { useState } from "react";
 import FormHeadline from "./FormHeadline";
 import DoubleInputField from "./InputFIelds/DoubleInputField";
 
-const AdvancedInputField = ({ heading }) => {
+const AdvancedInputField = ({ heading, subheading }) => {
   const [doubleInputs, setDoubleInputs] = useState([]);
 
   return (
-    <div>
+    <div className="advanced-input">
       <FormHeadline
         headline={heading}
         doubleInputs={doubleInputs}
         setDoubleInputs={setDoubleInputs}
+        subheading={subheading}
       />
       <div className="journey-input">
-        <DoubleInputField />
+        <DoubleInputField subheading={subheading} />
         {doubleInputs}
       </div>
     </div>

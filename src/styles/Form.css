@@ -40,6 +40,9 @@ form button:hover {
   display: flex;
   flex-direction: column;
   gap: 13px;
+  max-height: 35vw;
+  padding-right: 10px;
+  overflow-y: auto;
 }
 
 .form-headline {
