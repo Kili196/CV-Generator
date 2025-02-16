@@ -11,6 +11,8 @@ function App() {
     lastname: "",
     email: "",
     phonenumber: "",
+    schools: [],
+    works: [],
   });
 
   return (
