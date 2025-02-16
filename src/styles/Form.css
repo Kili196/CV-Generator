@@ -32,11 +32,32 @@ form button {
   font-weight: 600;
 }
 
+form button:hover {
+  background-color: var(--highlight-hover-color);
+}
+
 .form-input-container {
   display: flex;
   flex-direction: column;
   gap: 13px;
 }
 
-.school-input {
+.form-headline {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+}
+
+.headline-seperator {
+  height: 1px;
+  background-color: gray;
+  width: 100%;
+}
+
+.form-headline h1 {
+  padding: 0;
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 600;
 }
