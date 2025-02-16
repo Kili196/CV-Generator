@@ -1,5 +1,6 @@
 import Header from "./Header";
 import SimpleInputField from "./SimpleInputField";
+import FormHeadline from "./FormHeadline";
 import { useState } from "react";
 
 const FormView = ({ user, setUser }) => {
@@ -55,6 +56,8 @@ const FormView = ({ user, setUser }) => {
             handleChange={handleChange}
             objectChange="phonenumber"
           />
+
+          <FormHeadline />
         </div>
 
         <button type="submit" onClick={handleEvent}>
