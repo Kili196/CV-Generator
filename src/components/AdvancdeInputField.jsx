@@ -1,13 +1,20 @@
+import { useState } from "react";
 import FormHeadline from "./FormHeadline";
 import DoubleInputField from "./InputFIelds/DoubleInputField";
 
 const AdvancedInputField = ({ heading }) => {
+  const [doubleInputs, setDoubleInputs] = useState([]);
+
   return (
     <div>
-      <FormHeadline headline={heading} />
+      <FormHeadline
+        headline={heading}
+        doubleInputs={doubleInputs}
+        setDoubleInputs={setDoubleInputs}
+      />
       <div className="journey-input">
         <DoubleInputField />
-        <DoubleInputField />
+        {doubleInputs}
       </div>
     </div>
   );
