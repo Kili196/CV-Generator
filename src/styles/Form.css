@@ -68,3 +68,22 @@ form button:hover {
   width: 100%;
   margin-bottom: 6px;
 }
+
+.journey-input {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-pair {
+  display: grid;
+  grid-template-columns: 3fr 1fr 1fr;
+  gap: 1em;
+}
+
+@media (max-width: 1360px) {
+  .input-pair {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3px;
+  }
+}
