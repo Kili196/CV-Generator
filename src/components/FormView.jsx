@@ -9,6 +9,8 @@ const FormView = ({ user, setUser }) => {
     lastname: "",
     email: "",
     phonenumber: "",
+    schools: [],
+    works: [],
   });
 
   const handleChange = (event, detail) => {
