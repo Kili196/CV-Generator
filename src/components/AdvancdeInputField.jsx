@@ -1,9 +1,9 @@
 import FormHeadline from "./FormHeadline";
 
-const AdvancedInputField = () => {
+const AdvancedInputField = ({ heading }) => {
   return (
     <>
-      <FormHeadline headline={"School Journey:"} />
+      <FormHeadline headline={heading} />
     </>
   );
 };

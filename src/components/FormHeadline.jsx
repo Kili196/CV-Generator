@@ -1,7 +1,10 @@
 const FormHeadline = ({ headline }) => {
   return (
     <div className="form-headline">
-      <h1> {headline}</h1>
+      <div className="heading">
+        <h1> {headline}</h1>
+        <button> ADD </button>
+      </div>
       <div className="headline-seperator"> </div>
     </div>
   );

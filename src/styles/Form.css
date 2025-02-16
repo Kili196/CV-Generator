@@ -61,3 +61,10 @@ form button:hover {
   font-size: 1.2rem;
   font-weight: 600;
 }
+
+.heading {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 6px;
+}
