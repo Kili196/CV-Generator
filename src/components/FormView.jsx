@@ -1,5 +1,5 @@
 import Header from "./Header";
-import SimpleInputField from "./SimpleInputField";
+import SimpleInputField from "./InputFIelds/SimpleInputField";
 import AdvancedInputField from "./AdvancdeInputField";
 import { useState } from "react";
 
@@ -18,6 +18,7 @@ const FormView = ({ user, setUser }) => {
 
   const handleEvent = (event) => {
     event.preventDefault();
+    event.checkValidity();
     setUser(userTemp);
   };
 
