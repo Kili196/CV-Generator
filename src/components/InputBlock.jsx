@@ -2,7 +2,7 @@ import { useState } from "react";
 import FormHeadline from "./FormHeadline";
 import DoubleInputField from "./InputFIelds/DoubleInputField";
 
-const InputBlock = ({ heading, subheading }) => {
+const InputBlock = ({ heading, subheading, placeholder }) => {
   const [doubleInputs, setDoubleInputs] = useState([]);
 
   return (
@@ -14,7 +14,7 @@ const InputBlock = ({ heading, subheading }) => {
         subheading={subheading}
       />
       <div className="scrollable padding-right-1em">
-        <DoubleInputField subheading={subheading} />
+        <DoubleInputField subheading={subheading} placeholder={placeholder} />
         {doubleInputs}
       </div>
     </div>

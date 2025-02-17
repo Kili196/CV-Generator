@@ -1,9 +1,9 @@
-const DoubleInputField = ({ subheading }) => {
+const DoubleInputField = ({ subheading, placeholder }) => {
   return (
     <div className="input-pair">
       <div>
         <label> {subheading}: </label>
-        <input type="text" required />
+        <input type="text" required placeholder={placeholder} />
       </div>
       <div>
         <label> From: </label>

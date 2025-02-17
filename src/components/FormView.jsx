@@ -60,9 +60,17 @@ const FormView = ({ user, setUser }) => {
             objectChange="phonenumber"
           />
 
-          <InputBlock heading={"School Journey:"} subheading={"School"} />
+          <InputBlock
+            heading={"School Journey:"}
+            subheading={"School"}
+            placeholder={"Enter school"}
+          />
 
-          <InputBlock heading={"Work Journey:"} subheading={"Work"} />
+          <InputBlock
+            heading={"Work Journey:"}
+            subheading={"Work"}
+            placeholder={"Enter work"}
+          />
         </div>
 
         <button type="submit" onClick={handleEvent}>
