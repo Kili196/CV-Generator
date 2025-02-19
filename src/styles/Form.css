@@ -87,6 +87,10 @@ form button:hover {
   gap: 1em;
 }
 
+.remove-list-style {
+  list-style: none;
+}
+
 @media (max-width: 1360px) {
   .input-pair {
     display: grid;
