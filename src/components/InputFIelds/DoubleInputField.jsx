@@ -1,4 +1,4 @@
-const DoubleInputField = ({ subheading, placeholder }) => {
+const DoubleInputField = ({ subheading, placeholder, data_id }) => {
   return (
     <div className="input-pair">
       <div>
