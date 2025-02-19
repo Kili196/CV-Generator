@@ -8,12 +8,13 @@ const FormHeadline = ({
   id,
   setDataId,
   placeholder,
+  addExperience,
+  type,
 }) => {
   function addInput(event) {
     event.preventDefault();
 
     setDataId((prev) => prev + 1);
-
     setDoubleInputs([
       ...doubleInputs,
       <DoubleInputField
@@ -22,6 +23,7 @@ const FormHeadline = ({
         placeholder={placeholder}
       />,
     ]);
+    addExperience(id, type);
   }
 
   return (

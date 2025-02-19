@@ -9,8 +9,8 @@ const FormView = ({ user, setUser }) => {
     lastname: "",
     email: "",
     phonenumber: "",
-    schools: [],
-    works: [],
+    schools: [{ id: 0, name: "", from: "", to: "" }],
+    works: [{ id: 0, name: "", from: "", to: "" }],
   });
 
   const handleChange = (event, detail) => {
@@ -24,7 +24,14 @@ const FormView = ({ user, setUser }) => {
     setUser(userTemp);
   };
 
-  const addExperience = (event, detail, id) => {};
+  const addExperience = (id, type) => {
+    setUserTemp((prev) => ({
+      ...userTemp,
+      [type]: [...prev[type], { id: { id }, name: "", from: "", to: "" }],
+    }));
+
+    console.log(userTemp);
+  };
 
   return (
     <div className="form-section">
@@ -66,12 +73,16 @@ const FormView = ({ user, setUser }) => {
             heading={"School Journey:"}
             subheading={"School"}
             placeholder={"Enter school"}
+            addExperience={addExperience}
+            type={"schools"}
           />
 
           <InputBlock
             heading={"Work Journey:"}
             subheading={"Work"}
             placeholder={"Enter work"}
+            addExperience={addExperience}
+            type={"works"}
           />
         </div>
 

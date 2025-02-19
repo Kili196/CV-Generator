@@ -2,7 +2,13 @@ import { useState } from "react";
 import FormHeadline from "./FormHeadline";
 import DoubleInputField from "./InputFIelds/DoubleInputField";
 
-const InputBlock = ({ heading, subheading, placeholder }) => {
+const InputBlock = ({
+  heading,
+  subheading,
+  placeholder,
+  addExperience,
+  type,
+}) => {
   const [dataId, setDataId] = useState(0);
 
   const [doubleInputs, setDoubleInputs] = useState([
@@ -12,8 +18,6 @@ const InputBlock = ({ heading, subheading, placeholder }) => {
       data_id={dataId}
     />,
   ]);
-
-  console.log(dataId);
 
   return (
     <div className="advanced-input">
@@ -25,6 +29,8 @@ const InputBlock = ({ heading, subheading, placeholder }) => {
         setDataId={setDataId}
         id={dataId}
         placeholder={placeholder}
+        addExperience={addExperience}
+        type={type}
       />
       <div className="scrollable padding-right-1em remove-list-style">
         {doubleInputs.map((input) => (
