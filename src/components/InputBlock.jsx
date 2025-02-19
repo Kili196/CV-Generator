@@ -24,6 +24,7 @@ const InputBlock = ({ heading, subheading, placeholder }) => {
         subheading={subheading}
         setDataId={setDataId}
         id={dataId}
+        placeholder={placeholder}
       />
       <div className="scrollable padding-right-1em remove-list-style">
         {doubleInputs.map((input) => (

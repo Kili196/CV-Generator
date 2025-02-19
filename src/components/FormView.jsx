@@ -24,6 +24,8 @@ const FormView = ({ user, setUser }) => {
     setUser(userTemp);
   };
 
+  const addExperience = (event, detail, id) => {};
+
   return (
     <div className="form-section">
       <Header />

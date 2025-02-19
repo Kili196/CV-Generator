@@ -7,6 +7,7 @@ const FormHeadline = ({
   subheading,
   id,
   setDataId,
+  placeholder,
 }) => {
   function addInput(event) {
     event.preventDefault();
@@ -15,7 +16,11 @@ const FormHeadline = ({
 
     setDoubleInputs([
       ...doubleInputs,
-      <DoubleInputField subheading={subheading} data_id={id} />,
+      <DoubleInputField
+        subheading={subheading}
+        data_id={id}
+        placeholder={placeholder}
+      />,
     ]);
   }
 
