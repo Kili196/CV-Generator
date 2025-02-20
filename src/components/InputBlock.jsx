@@ -8,6 +8,7 @@ const InputBlock = ({
   placeholder,
   addExperience,
   type,
+  handleEventDoubleInput,
 }) => {
   const [dataId, setDataId] = useState(1);
 
@@ -16,6 +17,8 @@ const InputBlock = ({
       subheading={subheading}
       placeholder={placeholder}
       data_id={dataId}
+      handleEventDoubleInput={handleEventDoubleInput}
+      type={type}
     />,
   ]);
 
@@ -31,6 +34,7 @@ const InputBlock = ({
         placeholder={placeholder}
         addExperience={addExperience}
         type={type}
+        handleEventDoubleInput={handleEventDoubleInput}
       />
       <div className="scrollable padding-right-1em remove-list-style">
         {doubleInputs.map((input) => (

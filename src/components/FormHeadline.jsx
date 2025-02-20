@@ -10,6 +10,7 @@ const FormHeadline = ({
   placeholder,
   addExperience,
   type,
+  handleEventDoubleInput,
 }) => {
   function addInput(event) {
     event.preventDefault();
@@ -21,6 +22,8 @@ const FormHeadline = ({
         subheading={subheading}
         data_id={id}
         placeholder={placeholder}
+        handleEventDoubleInput={handleEventDoubleInput}
+        type={type}
       />,
     ]);
     addExperience(id, type);

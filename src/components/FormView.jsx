@@ -25,15 +25,14 @@ const FormView = ({ user, setUser }) => {
   };
 
   const addExperience = (id, type) => {
-    console.log(userTemp);
-    setUserTemp((prev) => ({
+    setUserTemp({
       ...userTemp,
-      [type]: [...prev[type], { id, name: "", from: "", to: "" }],
-    }));
+      [type]: [...userTemp[type], { id, name: "", from: "", to: "" }],
+    });
   };
 
-  const handeEventExperience = (id, detail, event) => {
-    const value = event.target.value;
+  const handleEventDoubleInput = (id, detail, event, type) => {
+    console.log(userTemp);
   };
 
   return (
@@ -78,6 +77,7 @@ const FormView = ({ user, setUser }) => {
             placeholder={"Enter school"}
             addExperience={addExperience}
             type={"schools"}
+            handleEventDoubleInput={handleEventDoubleInput}
           />
 
           <InputBlock
@@ -86,6 +86,7 @@ const FormView = ({ user, setUser }) => {
             placeholder={"Enter work"}
             addExperience={addExperience}
             type={"works"}
+            handleEventDoubleInput={handleEventDoubleInput}
           />
         </div>
 
