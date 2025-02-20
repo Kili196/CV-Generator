@@ -25,12 +25,15 @@ const FormView = ({ user, setUser }) => {
   };
 
   const addExperience = (id, type) => {
+    console.log(userTemp);
     setUserTemp((prev) => ({
       ...userTemp,
-      [type]: [...prev[type], { id: { id }, name: "", from: "", to: "" }],
+      [type]: [...prev[type], { id, name: "", from: "", to: "" }],
     }));
+  };
 
-    console.log(userTemp);
+  const handeEventExperience = (id, detail, event) => {
+    const value = event.target.value;
   };
 
   return (

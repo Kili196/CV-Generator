@@ -9,7 +9,7 @@ const InputBlock = ({
   addExperience,
   type,
 }) => {
-  const [dataId, setDataId] = useState(0);
+  const [dataId, setDataId] = useState(1);
 
   const [doubleInputs, setDoubleInputs] = useState([
     <DoubleInputField
