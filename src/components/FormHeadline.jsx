@@ -29,7 +29,7 @@ const FormHeadline = ({
   return (
     <div className="form-headline">
       <div className="heading">
-        <h1> {headline}</h1>
+        <h1 className="heading-style"> {headline}</h1>
         <button onClick={addInput}> ADD </button>
       </div>
       <div className="headline-seperator"> </div>

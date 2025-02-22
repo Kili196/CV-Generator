@@ -1,7 +1,7 @@
 import "./styles/App.css";
 import "./styles/Form.css";
 import "./styles/Seperator.css";
-import "./styles/Header.css";
+
 import FormView from "./components/FormView";
 import { useState } from "react";
 
@@ -11,6 +11,8 @@ function App() {
     lastname: "",
     email: "",
     phonenumber: "",
+    address: "",
+    aboutme: "",
     schools: [],
     works: [],
   });
@@ -20,7 +22,7 @@ function App() {
       <FormView user={user} setUser={setUser} />
       <div className="cv-view">
         {" "}
-        dsasd {user.firstname} {user.lastname} {user.email} {user.phonenumber}{" "}
+        dsasd {user.firstname} {user.lastname} {user.email} {user.aboutme}{" "}
       </div>
     </div>
   );

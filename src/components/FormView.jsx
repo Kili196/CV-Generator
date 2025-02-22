@@ -10,6 +10,8 @@ const FormView = ({ user, setUser }) => {
     lastname: "",
     email: "",
     phonenumber: "",
+    address: "",
+    aboutme: "",
     schools: [{ id: 0, name: "", from: "", to: "" }],
     works: [{ id: 0, name: "", from: "", to: "" }],
   });
@@ -50,18 +52,18 @@ const FormView = ({ user, setUser }) => {
     <div className="form-section">
       <Header />
       <form>
-        <div className="form-input-container full-height">
+        <div className="form-input-container full-height padding-bottom-1em">
           <div className="name-input">
             <SimpleInputField
               text={"Firstname"}
-              placeholder={"Enter firstname"}
+              placeholder={"Enter firstname..."}
               type={"text"}
               handleChange={handleChange}
               objectChange="firstname"
             />
             <SimpleInputField
               text={"Lastname"}
-              placeholder={"Enter lastname"}
+              placeholder={"Enter lastname..."}
               type={"text"}
               handleChange={handleChange}
               objectChange="lastname"
@@ -70,16 +72,23 @@ const FormView = ({ user, setUser }) => {
           <SimpleInputField
             text={"Email-Adress"}
             type={"email"}
-            placeholder={"Enter email"}
+            placeholder={"Enter email..."}
             handleChange={handleChange}
             objectChange="email"
           />
           <SimpleInputField
             text={"Phone-number"}
             type={"tel"}
-            placeholder={"Enter phonenumber"}
+            placeholder={"Enter phonenumber..."}
             handleChange={handleChange}
             objectChange="phonenumber"
+          />
+          <SimpleInputField
+            text={"Adress"}
+            type={"text"}
+            placeholder={"Enter adress..."}
+            handleChange={handleChange}
+            objectChange="adress"
           />
 
           <InputBlock
@@ -99,8 +108,13 @@ const FormView = ({ user, setUser }) => {
             type={"works"}
             handleEventDoubleInput={handleEventDoubleInput}
           />
-
-          <TextArea placeholder={"About you"} />
+          <div className="flex-grow-1 max-height-400px">
+            <TextArea
+              placeholder={"About you"}
+              handleChange={handleChange}
+              objectChange="aboutme"
+            />
+          </div>
         </div>
 
         <button type="submit" onClick={handleEvent}>
