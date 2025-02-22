@@ -35,7 +35,14 @@ const FormView = ({ user, setUser }) => {
   };
 
   const handleEventDoubleInput = (id, detail, event, type) => {
-    console.log(userTemp);
+    setUserTemp((prev) => {
+      const copiedArray = prev[type].map((element) =>
+        element.id === id
+          ? { ...element, [detail]: event.target.value }
+          : { id, name: "", from: "", to: "" }
+      );
+      return { ...prev, [type]: copiedArray };
+    });
   };
 
   return (
