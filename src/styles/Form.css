@@ -1,8 +1,16 @@
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 7vw;
+}
+
 form {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
   justify-content: space-between;
+  height: 93vw;
 }
 
 input {
@@ -40,9 +48,10 @@ form button:hover {
   display: flex;
   flex-direction: column;
   gap: 13px;
-  max-height: 35vw;
+  max-height: 70vw;
   padding-right: 10px;
   overflow-y: auto;
+  flex-grow: 1;
 }
 
 .form-headline {
@@ -89,6 +98,17 @@ form button:hover {
 
 .remove-list-style {
   list-style: none;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.full-height {
+  height: 100%;
+}
+
+.text-area-container {
 }
 
 @media (max-width: 1360px) {

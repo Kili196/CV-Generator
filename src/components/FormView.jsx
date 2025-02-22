@@ -2,6 +2,7 @@ import Header from "./Header";
 import SimpleInputField from "./InputFIelds/SimpleInputField";
 import InputBlock from "./InputBlock";
 import { useState, useEffect } from "react";
+import TextArea from "./TextAriea/TextArea";
 
 const FormView = ({ user, setUser }) => {
   const [userTemp, setUserTemp] = useState({
@@ -49,7 +50,7 @@ const FormView = ({ user, setUser }) => {
     <div className="form-section">
       <Header />
       <form>
-        <div className="form-input-container">
+        <div className="form-input-container full-height">
           <div className="name-input">
             <SimpleInputField
               text={"Firstname"}
@@ -98,6 +99,8 @@ const FormView = ({ user, setUser }) => {
             type={"works"}
             handleEventDoubleInput={handleEventDoubleInput}
           />
+
+          <TextArea placeholder={"About you"} />
         </div>
 
         <button type="submit" onClick={handleEvent}>
