@@ -1,4 +1,4 @@
-const DoubleInputField = ({
+const AdvancedInputField = ({
   subheading,
   placeholder,
   data_id,
@@ -42,4 +42,4 @@ const DoubleInputField = ({
   );
 };
 
-export default DoubleInputField;
+export default AdvancedInputField;

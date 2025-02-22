@@ -1,5 +1,3 @@
-import DoubleInputField from "./InputFIelds/DoubleInputField";
-
 const FormHeadline = ({
   headline,
   doubleInputs,

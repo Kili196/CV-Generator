@@ -1,6 +1,6 @@
 import { useState } from "react";
 import FormHeadline from "./FormHeadline";
-import DoubleInputField from "./InputFIelds/DoubleInputField";
+import AdvancedInputField from "./InputFIelds/AdvancedInputField";
 
 const InputBlock = ({
   heading,
@@ -38,7 +38,7 @@ const InputBlock = ({
       />
       <div className="scrollable padding-right-1em remove-list-style">
         {doubleInputs.map((element) => (
-          <DoubleInputField
+          <AdvancedInputField
             subheading={element.subheading}
             placeholder={element.placeholder}
             data_id={element.data_id}
