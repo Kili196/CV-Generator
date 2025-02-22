@@ -13,13 +13,13 @@ const InputBlock = ({
   const [dataId, setDataId] = useState(1);
 
   const [doubleInputs, setDoubleInputs] = useState([
-    <DoubleInputField
-      subheading={subheading}
-      placeholder={placeholder}
-      data_id={dataId}
-      handleEventDoubleInput={handleEventDoubleInput}
-      type={type}
-    />,
+    {
+      subheading: subheading,
+      placeholder: placeholder,
+      data_id: dataId,
+      handleEventDoubleInput: handleEventDoubleInput,
+      type: type,
+    },
   ]);
 
   return (
@@ -30,15 +30,21 @@ const InputBlock = ({
         setDoubleInputs={setDoubleInputs}
         subheading={subheading}
         setDataId={setDataId}
-        id={dataId}
+        dataId={dataId}
         placeholder={placeholder}
         addExperience={addExperience}
         type={type}
         handleEventDoubleInput={handleEventDoubleInput}
       />
       <div className="scrollable padding-right-1em remove-list-style">
-        {doubleInputs.map((input) => (
-          <li> {input} </li>
+        {doubleInputs.map((element) => (
+          <DoubleInputField
+            subheading={element.subheading}
+            placeholder={element.placeholder}
+            data_id={element.data_id}
+            handleEventDoubleInput={handleEventDoubleInput}
+            type={type}
+          />
         ))}
       </div>
     </div>

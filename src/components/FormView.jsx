@@ -1,7 +1,7 @@
 import Header from "./Header";
 import SimpleInputField from "./InputFIelds/SimpleInputField";
 import InputBlock from "./InputBlock";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const FormView = ({ user, setUser }) => {
   const [userTemp, setUserTemp] = useState({
@@ -13,10 +13,13 @@ const FormView = ({ user, setUser }) => {
     works: [{ id: 0, name: "", from: "", to: "" }],
   });
 
+  useEffect(() => {
+    console.log("Updated userTemp:", userTemp);
+  }, [userTemp]);
+
   const handleChange = (event, detail) => {
     const value = event.target.value;
     setUserTemp({ ...userTemp, [detail]: value });
-    console.log(userTemp);
   };
 
   const handleEvent = (event) => {
@@ -25,10 +28,10 @@ const FormView = ({ user, setUser }) => {
   };
 
   const addExperience = (id, type) => {
-    setUserTemp({
-      ...userTemp,
-      [type]: [...userTemp[type], { id, name: "", from: "", to: "" }],
-    });
+    setUserTemp((prev) => ({
+      ...prev,
+      [type]: [...prev[type], { id, name: "", from: "", to: "" }],
+    }));
   };
 
   const handleEventDoubleInput = (id, detail, event, type) => {
