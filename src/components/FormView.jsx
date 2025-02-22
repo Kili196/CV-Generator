@@ -16,11 +16,11 @@ const FormView = ({ user, setUser }) => {
   const handleChange = (event, detail) => {
     const value = event.target.value;
     setUserTemp({ ...userTemp, [detail]: value });
+    console.log(userTemp);
   };
 
   const handleEvent = (event) => {
     event.preventDefault();
-    event.checkValidity();
     setUser(userTemp);
   };
 
