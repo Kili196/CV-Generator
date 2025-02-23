@@ -7,7 +7,7 @@ const AdvancedInputField = ({
 }) => {
   return (
     <div className="input-pair">
-      <div>
+      <div className="input-field">
         <label> {subheading}: </label>
         <input
           type="text"
@@ -18,7 +18,7 @@ const AdvancedInputField = ({
           }
         />
       </div>
-      <div>
+      <div className="input-field">
         <label> From: </label>
         <input
           type="date"
@@ -28,7 +28,7 @@ const AdvancedInputField = ({
           }
         />
       </div>
-      <div>
+      <div className="input-field">
         <label> To: </label>
         <input
           type="date"

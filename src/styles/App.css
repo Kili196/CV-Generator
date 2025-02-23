@@ -1,6 +1,6 @@
 :root {
   --main-backgroundColor: #e8ecec;
-  --form-width: 30vw;
+  --form-width: 40vw;
   --highlight-color: #7b2cbf;
   --highlight-hover-color: #9c4edd;
   --focus-color: #f0f4fc;
@@ -11,8 +11,8 @@
 }
 
 .container {
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: 2fr 4fr;
 }
 
 .form-section {
