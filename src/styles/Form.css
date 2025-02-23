@@ -77,6 +77,15 @@ textarea {
   flex-direction: column;
 }
 
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.justify-content-spacebetween {
+  justify-content: space-between;
+}
+
 .max-height-300px {
   max-height: 150px;
 }
@@ -95,6 +104,22 @@ textarea {
 .simple-input-field {
   display: flex;
   flex-direction: column;
+}
+
+/* Advanced Input Field**/
+
+.inputblock-headline h1 {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.inputblock-headline {
+  margin-top: 15px;
+}
+
+.inputblock-headline button {
+  font-size: 0.9rem;
+  margin-bottom: 5px;
 }
 
 input {

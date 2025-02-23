@@ -27,9 +27,9 @@ const FormHeadline = ({
   }
 
   return (
-    <div className="form-headline">
-      <div className="heading">
-        <h1 className="heading-style"> {headline}</h1>
+    <div className="">
+      <div className="flex-row justify-content-spacebetween padding inputblock-headline">
+        <h1 className=""> {headline}</h1>
         <button onClick={addInput}> ADD </button>
       </div>
       <div className="headline-seperator"> </div>
