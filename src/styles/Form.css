@@ -1,36 +1,6 @@
-header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: 7vw;
-}
+/* BASIC STYLE **/
 
-form {
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
-  justify-content: space-between;
-  height: 93vw;
-}
-
-input {
-  width: 100%;
-  padding: 6px;
-  border: 1px solid gray;
-  border-radius: 3px;
-}
-
-.input-container label {
-  font-size: 1rem;
-}
-
-.name-input {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 13px;
-}
-
-form button {
+button {
   padding: 3px;
   font-size: 1rem;
   border-radius: 3px;
@@ -40,39 +10,24 @@ form button {
   font-weight: 600;
 }
 
-form button:hover {
+button:hover {
   background-color: var(--highlight-hover-color);
 }
 
-.form-input-container {
-  display: flex;
-  flex-direction: column;
-  gap: 13px;
-  max-height: 70vw;
-  padding-right: 10px;
-  overflow-y: auto;
-  flex-grow: 1;
+/* HEADER STYLE **/
+
+header {
+  padding: 1em;
+  text-align: center;
+  flex-grow: 0;
 }
 
-.form-headline {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: start;
+h1 {
+  margin: 0;
+  font-size: 1.8rem;
 }
 
-.headline-seperator {
-  height: 1px;
-  background-color: gray;
-  width: 100%;
-}
-
-.heading {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  margin-bottom: 6px;
-}
+/* UTILITY CLASSES **/
 
 .scrollable {
   max-height: 8vw;
@@ -113,8 +68,36 @@ textarea {
   flex-grow: 1;
 }
 
-.max-height-400px {
-  max-height: 300px;
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.max-height-300px {
+  max-height: 150px;
+}
+
+/* **/
+
+form {
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+
+.headline-seperator {
+  height: 1px;
+  background-color: gray;
+  width: 100%;
+}
+
+.heading {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 6px;
 }
 
 .heading-style {
@@ -137,15 +120,6 @@ textarea {
     display: grid;
     grid-template-columns: 1fr;
     gap: 3px;
-  }
-
-  .form-input-container {
-    display: flex;
-    flex-direction: column;
-    gap: 13px;
-    max-height: 70vw;
-    padding-right: 10px;
-    overflow-y: auto;
   }
 
   .scrollable {

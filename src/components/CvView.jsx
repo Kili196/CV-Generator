@@ -1,5 +1,5 @@
 const CvView = () => {
-  return <> </>;
+  return <div className="cv-view"></div>;
 };
 
 export default CvView;

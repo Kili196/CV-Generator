@@ -3,6 +3,7 @@ import "./styles/Form.css";
 import "./styles/Seperator.css";
 
 import FormView from "./components/FormView";
+import CvView from "./components/CvView";
 import { useState } from "react";
 
 function App() {

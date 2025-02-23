@@ -1,6 +1,6 @@
 :root {
   --main-backgroundColor: #e8ecec;
-  --form-width: 40vw;
+  --form-width: 30vw;
   --highlight-color: #7b2cbf;
   --highlight-hover-color: #9c4edd;
 }
@@ -18,7 +18,7 @@
   display: flex;
   flex-direction: column;
   height: 100vh;
-  min-width: var(--form-width);
+  max-width: var(--form-width);
   box-shadow: 1px 0px 10px rgba(54, 54, 54, 0.3); /* Right shadow */
   position: relative;
   padding-top: 20px;
