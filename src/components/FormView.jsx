@@ -53,7 +53,7 @@ const FormView = ({ user, setUser }) => {
       <Header />
       <form>
         <div className="">
-          <div className="">
+          <div className="grid-2-rows gap">
             <SimpleInputField
               text={"Firstname"}
               placeholder={"Enter firstname..."}

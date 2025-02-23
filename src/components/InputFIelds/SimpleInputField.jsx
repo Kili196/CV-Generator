@@ -7,7 +7,7 @@ const SimpleInputField = ({
 }) => {
   return (
     <>
-      <div className="">
+      <div className="simple-input-field ">
         <label> {text}: </label>
         <input
           required
