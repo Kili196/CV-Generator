@@ -52,7 +52,7 @@ const FormView = ({ user, setUser }) => {
     <div className="flex-column">
       <Header />
       <form>
-        <div className="flex-grow-1">
+        <div className="flex-column padding-bottom-1em flex-grow-1">
           <div className="grid-2-rows gap">
             <SimpleInputField
               text={"Firstname"}
@@ -108,13 +108,12 @@ const FormView = ({ user, setUser }) => {
             type={"works"}
             handleEventDoubleInput={handleEventDoubleInput}
           />
-          <div className="flex-column height-auto">
-            <TextArea
-              placeholder={"About you"}
-              handleChange={handleChange}
-              objectChange="aboutme"
-            />
-          </div>
+
+          <TextArea
+            placeholder={"About you"}
+            handleChange={handleChange}
+            objectChange="aboutme"
+          />
         </div>
 
         <button type="submit" onClick={handleEvent}>
