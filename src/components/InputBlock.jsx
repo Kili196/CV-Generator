@@ -20,12 +20,26 @@ const InputBlock = ({
     },
   ]);
 
+  function addInput(event) {
+    event.preventDefault();
+    setDataId((previousCount) => previousCount + 1);
+    setDoubleInputs([
+      ...doubleInputs,
+      {
+        subheading: subheading,
+        placeholder: placeholder,
+        data_id: dataId + 1,
+        handleEventDoubleInput: handleEventDoubleInput,
+        type: type,
+      },
+    ]);
+  }
+
   return (
     <div className="advanced-input">
       <FormHeadline
         headline={heading}
-        doubleInputs={doubleInputs}
-        setDoubleInputs={setDoubleInputs}
+        addInput={addInput}
         subheading={subheading}
         setDataId={setDataId}
         dataId={dataId}
