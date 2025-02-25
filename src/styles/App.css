@@ -5,6 +5,7 @@
   --highlight-hover-color: #9c4edd;
   --focus-color: #f0f4fc;
   --focus-border-color: #4a90e2;
+  --input-border-color: rgba(39, 40, 41, 0.6);
 }
 
 * {

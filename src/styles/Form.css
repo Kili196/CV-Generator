@@ -42,18 +42,6 @@ h1 {
   padding-bottom: 1em;
 }
 
-textarea {
-  resize: none;
-  height: 100%;
-  border-radius: 10px;
-  outline: 1px;
-}
-
-textarea:focus {
-  background-color: var(--focus-color);
-  outline: 1px solid var(--focus-border-color);
-}
-
 .gap {
   gap: 1em;
 }
@@ -128,13 +116,27 @@ textarea:focus {
   margin-bottom: 5px;
 }
 
+/* Input fields **/
+
 input {
   border-radius: 8px;
   padding: 7px;
-  border: 1px solid gray;
+  border: 1px solid var(--input-border-color);
 }
 
 input:focus {
+  background-color: var(--focus-color);
+  outline: 1px solid var(--focus-border-color);
+}
+
+textarea {
+  resize: none;
+  height: 100%;
+  border-radius: 10px;
+  border: 1px solid var(--input-border-color);
+}
+
+textarea:focus {
   background-color: var(--focus-color);
   outline: 1px solid var(--focus-border-color);
 }
