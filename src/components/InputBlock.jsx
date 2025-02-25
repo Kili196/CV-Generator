@@ -24,18 +24,18 @@ const InputBlock = ({
     event.preventDefault();
     setDataId((previousCount) => {
       const newId = previousCount + 1;
-
-      setDoubleInputs([
-        ...doubleInputs,
-        {
-          subheading: subheading,
-          placeholder: placeholder,
-          data_id: newId,
-          handleEventDoubleInput: handleEventDoubleInput,
-          type: type,
-        },
-      ]);
-
+      setDoubleInputs((previousInputs) => {
+        [
+          ...previousInputs,
+          {
+            subheading: subheading,
+            placeholder: placeholder,
+            data_id: newId,
+            handleEventDoubleInput: handleEventDoubleInput,
+            type: type,
+          },
+        ];
+      });
       return newId;
     });
   }
