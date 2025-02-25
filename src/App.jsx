@@ -18,10 +18,18 @@ function App() {
     works: [],
   });
 
+  const [isSumbitted, setIsSubmitted] = useState(false);
+
   return (
     <div className="container">
-      <FormView user={user} setUser={setUser} />
+      <FormView
+        user={user}
+        setUser={setUser}
+        isSumbitted={isSumbitted}
+        setIsSubmitted={setIsSubmitted}
+      />
       <CvView />
+      <h1> {isSumbitted && user.firstname} aaa </h1>
     </div>
   );
 }

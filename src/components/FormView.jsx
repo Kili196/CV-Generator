@@ -4,34 +4,23 @@ import InputBlock from "./InputBlock";
 import { useState, useEffect } from "react";
 import TextArea from "./TextAriea/TextArea";
 
-const FormView = ({ user, setUser }) => {
-  const [userTemp, setUserTemp] = useState({
-    firstname: "",
-    lastname: "",
-    email: "",
-    phonenumber: "",
-    address: "",
-    aboutme: "",
-    schools: [],
-    works: [],
-  });
-
+const FormView = ({ user, setUser, isSubmitted, setIsSubmitted }) => {
   useEffect(() => {
-    console.log("Updated userTemp:", userTemp);
-  }, [userTemp]);
+    console.log("Updated userTemp:", user);
+  }, [user]);
 
   const handleChange = (event, detail) => {
     const value = event.target.value;
-    setUserTemp({ ...userTemp, [detail]: value });
+    setUser({ ...user, [detail]: value });
   };
 
-  const handleEvent = (event) => {
+  const handleButtonClick = (event) => {
     event.preventDefault();
-    setUser(userTemp);
+    setIsSubmitted(true);
   };
 
   const handleEventDoubleInput = (id, detail, event, type) => {
-    setUserTemp((prev) => {
+    setUser((prev) => {
       const result = prev[type].find((element) => element.id == id);
       let copiedArray = [];
       if (!result) {
@@ -122,7 +111,7 @@ const FormView = ({ user, setUser }) => {
           />
         </div>
 
-        <button type="submit" onClick={handleEvent}>
+        <button type="submit" onClick={handleButtonClick}>
           Generate RESUME
         </button>
       </form>
