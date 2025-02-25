@@ -37,16 +37,7 @@ const InputBlock = ({
 
   return (
     <div className="advanced-input">
-      <FormHeadline
-        headline={heading}
-        addInput={addInput}
-        subheading={subheading}
-        setDataId={setDataId}
-        dataId={dataId}
-        placeholder={placeholder}
-        type={type}
-        handleEventDoubleInput={handleEventDoubleInput}
-      />
+      <FormHeadline headline={heading} addInput={addInput} />
       <div className="scrollable padding-right-1em remove-list-style">
         {doubleInputs.map((element) => (
           <AdvancedInputField
