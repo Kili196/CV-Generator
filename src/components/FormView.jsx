@@ -12,8 +12,8 @@ const FormView = ({ user, setUser }) => {
     phonenumber: "",
     address: "",
     aboutme: "",
-    schools: [{ id: 0, name: "", from: "", to: "" }],
-    works: [{ id: 0, name: "", from: "", to: "" }],
+    schools: [],
+    works: [],
   });
 
   useEffect(() => {
@@ -30,20 +30,28 @@ const FormView = ({ user, setUser }) => {
     setUser(userTemp);
   };
 
-  const addExperience = (id, type) => {
-    setUserTemp((prev) => ({
-      ...prev,
-      [type]: [...prev[type], { id, name: "", from: "", to: "" }],
-    }));
-  };
-
   const handleEventDoubleInput = (id, detail, event, type) => {
     setUserTemp((prev) => {
-      const copiedArray = prev[type].map((element) =>
-        element.id === id
-          ? { ...element, [detail]: event.target.value }
-          : { id, name: "", from: "", to: "" }
-      );
+      const result = prev[type].find((element) => element.id == id);
+      let copiedArray = [];
+      if (!result) {
+        const newObject = {
+          id,
+          name: "",
+          from: "",
+          to: "",
+          [detail]: event.target.value,
+        };
+
+        copiedArray = [...prev[type], newObject];
+      } else {
+        copiedArray = prev[type].map((element) =>
+          element.id == id
+            ? { ...element, [detail]: event.target.value }
+            : element
+        );
+      }
+
       return { ...prev, [type]: copiedArray };
     });
   };
@@ -95,7 +103,6 @@ const FormView = ({ user, setUser }) => {
             heading={"School Journey:"}
             subheading={"School"}
             placeholder={"Enter school"}
-            addExperience={addExperience}
             type={"schools"}
             handleEventDoubleInput={handleEventDoubleInput}
           />
@@ -104,7 +111,6 @@ const FormView = ({ user, setUser }) => {
             heading={"Work Journey:"}
             subheading={"Work"}
             placeholder={"Enter work"}
-            addExperience={addExperience}
             type={"works"}
             handleEventDoubleInput={handleEventDoubleInput}
           />

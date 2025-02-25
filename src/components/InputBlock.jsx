@@ -6,12 +6,10 @@ const InputBlock = ({
   heading,
   subheading,
   placeholder,
-  addExperience,
   type,
   handleEventDoubleInput,
 }) => {
   const [dataId, setDataId] = useState(1);
-
   const [doubleInputs, setDoubleInputs] = useState([
     {
       subheading: subheading,
@@ -32,7 +30,6 @@ const InputBlock = ({
         setDataId={setDataId}
         dataId={dataId}
         placeholder={placeholder}
-        addExperience={addExperience}
         type={type}
         handleEventDoubleInput={handleEventDoubleInput}
       />

@@ -6,7 +6,6 @@ const FormHeadline = ({
   dataId,
   setDataId,
   placeholder,
-  addExperience,
   type,
   handleEventDoubleInput,
 }) => {
@@ -18,12 +17,11 @@ const FormHeadline = ({
       {
         subheading: subheading,
         placeholder: placeholder,
-        data_id: dataId,
+        data_id: dataId + 1,
         handleEventDoubleInput: handleEventDoubleInput,
         type: type,
       },
     ]);
-    addExperience(dataId, type);
   }
 
   return (
