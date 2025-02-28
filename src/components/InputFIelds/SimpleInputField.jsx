@@ -8,7 +8,10 @@ const SimpleInputField = ({
   return (
     <>
       <div className="simple-input-field ">
-        <label> {text}: </label>
+        <label>
+          {" "}
+          <em>{text}: </em>{" "}
+        </label>
         <input
           required
           type={type}
