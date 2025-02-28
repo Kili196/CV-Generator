@@ -1,6 +1,8 @@
 import "./styles/App.css";
 import "./styles/Form.css";
 import "./styles/Seperator.css";
+import "./styles/CvView.css";
+import "./styles/Utility.css";
 
 import FormView from "./components/FormView";
 import CvView from "./components/CvView";
@@ -29,7 +31,6 @@ function App() {
         setIsSubmitted={setIsSubmitted}
       />
       <CvView />
-      <h1> {isSumbitted && user.firstname} aaa </h1>
     </div>
   );
 }

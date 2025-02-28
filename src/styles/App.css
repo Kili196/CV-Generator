@@ -12,11 +12,6 @@
   box-sizing: border-box;
 }
 
-.container {
-  display: grid;
-  grid-template-columns: 2fr 4fr;
-}
-
 .form-section {
   display: flex;
   flex-direction: column;
@@ -31,12 +26,6 @@
 .form-section header {
   display: flex;
   justify-content: center;
-}
-
-.cv-view {
-  height: 100vh;
-  min-width: calc(100vw - var(--form-width));
-  background-color: var(--main-backgroundColor);
 }
 
 h1 {

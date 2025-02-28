@@ -1,0 +1,8 @@
+.cv-view {
+  background-color: var(--main-backgroundColor);
+}
+.cv-container {
+  width: 45%;
+  height: 90%;
+  background-color: white;
+}
