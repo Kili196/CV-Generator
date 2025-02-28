@@ -93,6 +93,11 @@ h1 {
   margin-top: 10px;
 }
 
+.right-border-radius {
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
 /* Simple Input field**/
 
 .simple-input-field {

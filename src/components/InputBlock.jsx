@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import FormHeadline from "./FormHeadline";
 import AdvancedInputField from "./InputFIelds/AdvancedInputField";
 
@@ -9,12 +9,11 @@ const InputBlock = ({
   type,
   handleEventDoubleInput,
 }) => {
-  const [dataId, setDataId] = useState(1);
   const [doubleInputs, setDoubleInputs] = useState([
     {
       subheading: subheading,
       placeholder: placeholder,
-      data_id: dataId,
+      data_id: 1,
       handleEventDoubleInput: handleEventDoubleInput,
       type: type,
     },
@@ -22,21 +21,19 @@ const InputBlock = ({
 
   function addInput(event) {
     event.preventDefault();
-    setDataId((previousCount) => {
-      const newId = previousCount + 1;
-      setDoubleInputs((previousInputs) => {
-        [
-          ...previousInputs,
-          {
-            subheading: subheading,
-            placeholder: placeholder,
-            data_id: newId,
-            handleEventDoubleInput: handleEventDoubleInput,
-            type: type,
-          },
-        ];
-      });
-      return newId;
+    setDoubleInputs((previousInputs) => {
+      const result = [
+        ...previousInputs,
+        {
+          subheading: subheading,
+          placeholder: placeholder,
+          data_id: previousInputs[previousInputs.length - 1].data_id + 1,
+          handleEventDoubleInput: handleEventDoubleInput,
+          type: type,
+        },
+      ];
+
+      return result;
     });
   }
 
@@ -51,6 +48,7 @@ const InputBlock = ({
             data_id={element.data_id}
             handleEventDoubleInput={handleEventDoubleInput}
             type={type}
+            key={element.data_id}
           />
         ))}
       </div>
