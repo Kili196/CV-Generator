@@ -46,7 +46,7 @@ const FormView = ({ user, setUser, isSubmitted, setIsSubmitted }) => {
   };
 
   return (
-    <div className="flex-column ">
+    <div className="flex-column form-view-container">
       <Header />
       <form>
         <div className="flex-column padding-bottom-1em flex-grow-1">
