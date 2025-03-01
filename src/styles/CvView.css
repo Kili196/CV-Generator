@@ -2,10 +2,17 @@
   background-color: var(--main-backgroundColor);
 }
 .cv-container {
-  min-width: 45%;
-  min-height: 90%;
-
-  max-width: 45%;
-  min-height: 90%;
+  width: 600px;
+  height: 80%;
+  display: grid;
+  grid-template-rows: auto 1fr;
   background-color: white;
+}
+
+.cv-heading-section {
+  background-color: beige;
+}
+
+.cv-information-section {
+  background-color: black;
 }
