@@ -30,7 +30,7 @@ function App() {
         isSumbitted={isSumbitted}
         setIsSubmitted={setIsSubmitted}
       />
-      <CvView user={user} />
+      {isSumbitted && <CvView user={user} />}
     </div>
   );
 }
