@@ -7,7 +7,7 @@
 }
 .cv-container {
   width: 700px;
-  height: 90%;
+  height: auto;
   display: grid;
   grid-template-rows: auto 3fr;
   background-color: white;
@@ -21,8 +21,8 @@
   grid-template-columns: auto 1fr;
   color: white;
   font-weight: 600;
-  justify-items: center;
-  padding-bottom: 50;
+  justify-items: end;
+  padding-bottom: 40px;
 }
 
 .cv-detail {
@@ -31,4 +31,13 @@
   justify-items: start;
   align-items: start;
   gap: 30px;
+}
+
+header img {
+  width: 100px;
+  border-radius: 100px;
+}
+
+.cv-view main {
+  padding: 20px;
 }
