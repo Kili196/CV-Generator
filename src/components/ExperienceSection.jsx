@@ -1,13 +1,18 @@
+import Seperator from "./Seperator";
+
 const ExperienceSection = () => {
   return (
     <section>
-      <h1> Test </h1>
+      <h1>
+        {" "}
+        <em> Test </em>
+      </h1>
       <Seperator />
-      <ul>
+      <div className="padding-left-1em">
         <li> Test </li>
         <li> Test </li>
         <li> Test </li>
-      </ul>
+      </div>
     </section>
   );
 };

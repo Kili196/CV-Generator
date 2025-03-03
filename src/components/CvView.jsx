@@ -1,3 +1,4 @@
+import ExperienceSection from "./ExperienceSection";
 import HeaderDetails from "./HeaderDetails";
 import Seperator from "./Seperator";
 
@@ -11,33 +12,7 @@ const CvView = ({ user }) => {
         </header>
 
         <main>
-          <section>
-            <h1> Test </h1>
-            <Seperator />
-            <ul>
-              <li> Test </li>
-              <li> Test </li>
-              <li> Test </li>
-            </ul>
-          </section>
-          <section>
-            <h1> Test </h1>
-            <Seperator />
-            <ul>
-              <li> Test </li>
-              <li> Test </li>
-              <li> Test </li>
-            </ul>
-          </section>
-          <section>
-            <h1> Test </h1>
-            <Seperator />
-            <ul>
-              <li> Test </li>
-              <li> Test </li>
-              <li> Test </li>
-            </ul>
-          </section>
+          <ExperienceSection />
         </main>
       </div>
     </div>
