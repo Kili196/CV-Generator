@@ -85,7 +85,7 @@ const FormView = ({ user, setUser, isSubmitted, setIsSubmitted }) => {
             type={"text"}
             placeholder={"Enter adress..."}
             handleChange={handleChange}
-            objectChange="adress"
+            objectChange="address"
           />
 
           <InputBlock

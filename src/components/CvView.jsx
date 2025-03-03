@@ -1,11 +1,11 @@
 import HeaderDetails from "./HeaderDetails";
 
-const CvView = () => {
+const CvView = ({ user }) => {
   return (
     <div className="cv-view flex-center">
       <div className="cv-container">
         <header>
-          <HeaderDetails />
+          <HeaderDetails user={user} />
           <img src="/public/profile-picture-placeholder.png" />
         </header>
 
