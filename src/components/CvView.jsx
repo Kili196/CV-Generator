@@ -15,7 +15,7 @@ const CvView = ({ user }) => {
             <ExperienceSection headline={"School"} experience={user.schools} />
           )}
           {user.works.length != 0 && (
-            <ExperienceSection headline={"Works"} experience={user.schools} />
+            <ExperienceSection headline={"Works"} experience={user.works} />
           )}
         </main>
       </div>
