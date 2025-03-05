@@ -11,8 +11,11 @@ const ExperienceSection = ({ headline, experience }) => {
         {experience.map((element) => {
           return (
             <li className="experience-card">
-              {" "}
-              {element.name} von {element.to} bis {element.from}{" "}
+              {element.name} to{" "}
+              {element.to && new Date(element.to).toLocaleDateString("en-GB")}{" "}
+              until{" "}
+              {element.from &&
+                new Date(element.from).toLocaleDateString("en-GB")}{" "}
             </li>
           );
         })}
