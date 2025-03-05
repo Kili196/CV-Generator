@@ -61,3 +61,7 @@ section ul {
   padding: 10px;
   margin-top: 10px;
 }
+
+.experience-card b {
+  font-weight: 600;
+}
