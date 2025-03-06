@@ -19,7 +19,9 @@ const CvView = ({ user }) => {
             <ExperienceSection headline={"Works"} experience={user.works} />
           )}
 
-          <AboutMeSection headline={"About-Me"} desc={user.aboutme} />
+          {user.aboutme != "" && (
+            <AboutMeSection headline={"About-Me"} desc={user.aboutme} />
+          )}
         </main>
       </div>
     </div>
