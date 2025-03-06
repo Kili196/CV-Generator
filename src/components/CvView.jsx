@@ -18,7 +18,7 @@ const CvView = ({ user }) => {
             <ExperienceSection headline={"Works"} experience={user.works} />
           )}
 
-          <div> {user.aboutme}</div>
+          <section className="about-me-section"> {user.aboutme}</section>
         </main>
       </div>
     </div>
