@@ -1,6 +1,19 @@
 import Seperator from "./Seperator";
 
 const ExperienceSection = ({ headline, experience }) => {
+  function showRightExperience(element) {
+    console.log(element.to);
+    if (element.to != "" && element.from != "") {
+      return (
+        <li className="experience-card">
+          {element.name} from <b> {element.to} </b> until
+          <b> {element.from} </b>
+        </li>
+      );
+    }
+    return <li className="experience-card"> {element.name} </li>;
+  }
+
   return (
     <section>
       <h1>
@@ -9,18 +22,7 @@ const ExperienceSection = ({ headline, experience }) => {
       <Seperator />
       <div className="padding-left-1em ">
         {experience.map((element) => {
-          return (
-            <li className="experience-card">
-              {element.name} to
-              {element.to && (
-                <b> {new Date(element.to).toLocaleDateString("en-GB")} </b>
-              )}
-              until
-              {element.from && (
-                <b> {new Date(element.from).toLocaleDateString("en-GB")} </b>
-              )}
-            </li>
-          );
+          return showRightExperience(element);
         })}
       </div>
     </section>
