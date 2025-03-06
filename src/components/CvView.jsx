@@ -1,3 +1,4 @@
+import AboutMeSection from "./AboutmeSection";
 import ExperienceSection from "./ExperienceSection";
 import HeaderDetails from "./HeaderDetails";
 
@@ -18,7 +19,7 @@ const CvView = ({ user }) => {
             <ExperienceSection headline={"Works"} experience={user.works} />
           )}
 
-          <section className="about-me-section"> {user.aboutme}</section>
+          <AboutMeSection headline={"About-Me"} desc={user.aboutme} />
         </main>
       </div>
     </div>
