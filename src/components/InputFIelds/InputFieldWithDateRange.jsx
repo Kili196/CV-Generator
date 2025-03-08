@@ -1,4 +1,4 @@
-const AdvancedInputField = ({
+const InputFieldWithDateRange = ({
   subheading,
   placeholder,
   data_id,
@@ -42,4 +42,4 @@ const AdvancedInputField = ({
   );
 };
 
-export default AdvancedInputField;
+export default InputFieldWithDateRange;

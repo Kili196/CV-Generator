@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import FormHeadline from "./FormHeadline";
-import AdvancedInputField from "./InputFIelds/AdvancedInputField";
+import InputFieldWithDateRange from "./InputFIelds/InputFieldWithDateRange";
 
 const InputBlock = ({
   heading,
@@ -42,7 +42,7 @@ const InputBlock = ({
       <FormHeadline headline={heading} addInput={addInput} />
       <div className="scrollable padding-right-1em remove-list-style">
         {doubleInputs.map((element) => (
-          <AdvancedInputField
+          <InputFieldWithDateRange
             subheading={element.subheading}
             placeholder={element.placeholder}
             data_id={element.data_id}
