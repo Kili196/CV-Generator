@@ -16,8 +16,8 @@ function App() {
     phonenumber: "",
     address: "",
     aboutme: "",
-    schools: [],
-    works: [],
+    schools: [{ id: 1, name: "", from: "", to: "" }],
+    works: [{ id: 1, name: "", from: "", to: "" }],
   });
 
   useEffect(() => {

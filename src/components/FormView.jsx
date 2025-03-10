@@ -102,6 +102,8 @@ const FormView = ({ user, setUser, isSubmitted, setIsSubmitted }) => {
             type={"schools"}
             handleEventDoubleInput={handleEventDoubleInput}
             deleteExperience={deleteExperience}
+            experiences={user.schools}
+            setUser={setUser}
           />
 
           <InputBlock
@@ -110,6 +112,8 @@ const FormView = ({ user, setUser, isSubmitted, setIsSubmitted }) => {
             placeholder={"Enter work"}
             type={"works"}
             handleEventDoubleInput={handleEventDoubleInput}
+            experiences={user.works}
+            setUser={setUser}
           />
 
           <TextArea

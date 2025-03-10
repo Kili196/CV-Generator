@@ -9,30 +9,21 @@ const InputBlock = ({
   type,
   handleEventDoubleInput,
   deleteExperience,
+  experiences,
+  setUser,
 }) => {
-  const [doubleInputs, setDoubleInputs] = useState([
-    {
-      data_id: 1,
-      handleEventDoubleInput: handleEventDoubleInput,
-      type: type,
-    },
-  ]);
-
   function addInput(event) {
     event.preventDefault();
-    setDoubleInputs((previousInputs) => {
+    setUser((previous) => {
+      console.log(previous);
+      const prevArray = previous[type];
+
       const result = [
-        ...previousInputs,
-        {
-          subheading: subheading,
-          placeholder: placeholder,
-          data_id: previousInputs[previousInputs.length - 1].data_id + 1,
-          handleEventDoubleInput: handleEventDoubleInput,
-          type: type,
-        },
+        ...prevArray,
+        { id: prevArray[prevArray.length - 1].id + 1 },
       ];
 
-      return result;
+      return { ...previous, [type]: result };
     });
   }
 
@@ -40,14 +31,14 @@ const InputBlock = ({
     <div className="advanced-input">
       <FormHeadline headline={heading} addInput={addInput} />
       <div className="scrollable padding-right-1em remove-list-style">
-        {doubleInputs.map((element) => (
+        {experiences.map((element) => (
           <InputFieldWithDateRange
             subheading={subheading}
             placeholder={placeholder}
-            data_id={element.data_id}
+            data_id={element.id}
             handleEventDoubleInput={handleEventDoubleInput}
             type={type}
-            key={element.data_id}
+            key={element.id}
             deleteExperience={deleteExperience}
           />
         ))}
