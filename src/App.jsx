@@ -6,7 +6,7 @@ import "./styles/Utility.css";
 
 import FormView from "./components/FormView";
 import CvView from "./components/CvView";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 function App() {
   const [user, setUser] = useState({
@@ -19,6 +19,10 @@ function App() {
     schools: [],
     works: [],
   });
+
+  useEffect(() => {
+    console.log("Updated userTemp:", user);
+  }, [user]);
 
   const [isSumbitted, setIsSubmitted] = useState(false);
 

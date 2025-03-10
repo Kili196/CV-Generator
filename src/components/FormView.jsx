@@ -5,10 +5,6 @@ import { useState, useEffect } from "react";
 import TextArea from "./TextAriea/TextArea";
 
 const FormView = ({ user, setUser, isSubmitted, setIsSubmitted }) => {
-  useEffect(() => {
-    console.log("Updated userTemp:", user);
-  }, [user]);
-
   const handleChange = (event, detail) => {
     const value = event.target.value;
     setUser({ ...user, [detail]: value });
@@ -47,14 +43,13 @@ const FormView = ({ user, setUser, isSubmitted, setIsSubmitted }) => {
 
   const deleteExperience = (event, id, type) => {
     event.preventDefault();
-    console.log(id);
-    console.log(type);
-    console.log(user[type]);
-    console.log(user[type].filter((element) => element.id !== id));
-    setUser((previous) => ({
-      ...previous,
-      type: user[type].filter((element) => element.id !== id),
-    }));
+
+    setUser((prev) => {
+      return {
+        ...prev,
+        [type]: user[type].filter((element) => element.id !== id),
+      };
+    });
   };
 
   return (
