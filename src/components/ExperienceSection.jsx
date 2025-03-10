@@ -2,16 +2,22 @@ import Seperator from "./Seperator";
 
 const ExperienceSection = ({ headline, experience }) => {
   function showRightExperience(element) {
-    console.log(element.to);
-    if (element.to != "" && element.from != "") {
+    if (element.name !== "") {
+      if (element.to !== "" && element.from !== "") {
+        return (
+          <li className="experience-card" key={element.id}>
+            {element.name} from <b> {element.to} </b> until
+            <b> {element.from} </b>
+          </li>
+        );
+      }
       return (
-        <li className="experience-card">
-          {element.name} from <b> {element.to} </b> until
-          <b> {element.from} </b>
+        <li className="experience-card" key={element.id}>
+          {" "}
+          {element.name}{" "}
         </li>
       );
     }
-    return <li className="experience-card"> {element.name} </li>;
   }
 
   return (

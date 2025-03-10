@@ -20,7 +20,12 @@ const InputBlock = ({
 
       const result = [
         ...prevArray,
-        { id: prevArray[prevArray.length - 1].id + 1 },
+        {
+          id: prevArray[prevArray.length - 1].id + 1,
+          name: "",
+          from: "",
+          to: "",
+        },
       ];
 
       return { ...previous, [type]: result };
