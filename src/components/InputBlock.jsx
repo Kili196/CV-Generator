@@ -12,8 +12,6 @@ const InputBlock = ({
 }) => {
   const [doubleInputs, setDoubleInputs] = useState([
     {
-      subheading: subheading,
-      placeholder: placeholder,
       data_id: 1,
       handleEventDoubleInput: handleEventDoubleInput,
       type: type,
@@ -44,8 +42,8 @@ const InputBlock = ({
       <div className="scrollable padding-right-1em remove-list-style">
         {doubleInputs.map((element) => (
           <InputFieldWithDateRange
-            subheading={element.subheading}
-            placeholder={element.placeholder}
+            subheading={subheading}
+            placeholder={placeholder}
             data_id={element.data_id}
             handleEventDoubleInput={handleEventDoubleInput}
             type={type}
