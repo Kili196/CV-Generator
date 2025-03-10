@@ -21,7 +21,10 @@ const InputBlock = ({
       const result = [
         ...prevArray,
         {
-          id: prevArray[prevArray.length - 1].id + 1,
+          id:
+            prevArray[prevArray.length - 1] !== undefined
+              ? prevArray[prevArray.length - 1].id + 1
+              : 1,
           name: "",
           from: "",
           to: "",
