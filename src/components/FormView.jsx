@@ -112,6 +112,7 @@ const FormView = ({ user, setUser, isSubmitted, setIsSubmitted }) => {
             placeholder={"Enter work"}
             type={"works"}
             handleEventDoubleInput={handleEventDoubleInput}
+            deleteExperience={deleteExperience}
             experiences={user.works}
             setUser={setUser}
           />
