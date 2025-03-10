@@ -1,3 +1,5 @@
+import { MdDelete } from "react-icons/md";
+
 const InputFieldWithDateRange = ({
   subheading,
   placeholder,
@@ -37,6 +39,12 @@ const InputFieldWithDateRange = ({
             handleEventDoubleInput(data_id, "to", event, type)
           }
         />
+      </div>
+      <div className="input-field">
+        <div></div>
+        <button>
+          <MdDelete />
+        </button>
       </div>
     </div>
   );
