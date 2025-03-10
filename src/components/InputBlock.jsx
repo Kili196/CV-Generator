@@ -8,6 +8,7 @@ const InputBlock = ({
   placeholder,
   type,
   handleEventDoubleInput,
+  deleteExperience,
 }) => {
   const [doubleInputs, setDoubleInputs] = useState([
     {
@@ -49,6 +50,7 @@ const InputBlock = ({
             handleEventDoubleInput={handleEventDoubleInput}
             type={type}
             key={element.data_id}
+            deleteExperience={deleteExperience}
           />
         ))}
       </div>

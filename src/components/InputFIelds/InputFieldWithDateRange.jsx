@@ -6,6 +6,7 @@ const InputFieldWithDateRange = ({
   data_id,
   handleEventDoubleInput,
   type,
+  deleteExperience,
 }) => {
   return (
     <div className="input-pair">
@@ -42,7 +43,7 @@ const InputFieldWithDateRange = ({
       </div>
       <div className="input-field">
         <div></div>
-        <button>
+        <button onClick={(event) => deleteExperience(event, data_id, type)}>
           <MdDelete />
         </button>
       </div>

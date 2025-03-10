@@ -45,6 +45,18 @@ const FormView = ({ user, setUser, isSubmitted, setIsSubmitted }) => {
     });
   };
 
+  const deleteExperience = (event, id, type) => {
+    event.preventDefault();
+    console.log(id);
+    console.log(type);
+    console.log(user[type]);
+    console.log(user[type].filter((element) => element.id !== id));
+    setUser((previous) => ({
+      ...previous,
+      type: user[type].filter((element) => element.id !== id),
+    }));
+  };
+
   return (
     <div className="flex-column form-view-container">
       <Header />
@@ -94,6 +106,7 @@ const FormView = ({ user, setUser, isSubmitted, setIsSubmitted }) => {
             placeholder={"Enter school"}
             type={"schools"}
             handleEventDoubleInput={handleEventDoubleInput}
+            deleteExperience={deleteExperience}
           />
 
           <InputBlock
